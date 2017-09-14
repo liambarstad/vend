@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <a><%= link_to "Create New Owner", new_owner_path %></a>
+    <a><%= link_to "Create New Machine", new_machine_path %></a>
+    <%= flash[:notice] %>
     <%= yield %>
   </body>
 </html>

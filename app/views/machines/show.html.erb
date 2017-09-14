@@ -1,1 +1,12 @@
-<h1><%= @machine.location %> Vending Machine</h1>
+<h1>Machine: <%= @machine.name %></h1>
+<%= link_to "Edit", edit_machine_path(@machine) %>
+<%= link_to "Delete", machine_path(@machine), method: :delete %>
+<a>Owner: <%= link_to @machine.owner.name, owner_path(@machine.owner) %></a>
+<a>Location: <%= @machine.location %></a>
+<a>Average Price: <%= @machine.average_price %></a>
+
+<ul>
+<% @machine.snacks.each do |snack| %>
+  <li><%= link_to snack.name, snack_path(snack) %>: <%= snack.price.to_s %></li>
+<% end %>
+</ul>

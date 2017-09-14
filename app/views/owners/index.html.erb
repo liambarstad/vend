@@ -1,7 +1,8 @@
 <h1>Vending Machine Owners</h1>
-
 <ul>
   <% @owners.each do |owner| %>
-    <li><%= owner.name %></li>
+    <li><%= link_to owner.name, owner_path(owner) %></li>
+        <%= link_to "Edit Owner", edit_owner_path(owner) %>
+        <%= link_to "Delete Owner", owner_path(owner), method: :delete %>
   <% end %>
 </ul>

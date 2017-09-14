@@ -1,0 +1,7 @@
+<h1>Machines for: <%= @owner.name %></h1>
+<%= link_to "Edit Owner", edit_owner_path(@owner) %>
+<%= link_to "Delete Owner", owner_path(@owner), method: :delete %>
+<% @owner.machines.each do |machine| %>
+  <a><%= link_to machine.name, machine_path(machine) %>
+     location: <%= machine.location %></a>
+<% end %>

@@ -7,6 +7,6 @@ feature 'When a user visits a vending machine show page' do
 
     visit machine_path(dons)
 
-    expect(page).to have_content("Don's Mixed Drinks Vending Machine")
+    expect(page).to have_content("Don's Mixed Drinks")
   end
 end
